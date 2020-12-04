@@ -1,0 +1,64 @@
+<zk xmlns:n="native">
+	<style>
+		.todo {
+			border-radius: 3px;
+			border: 1px solid #ccc;
+			margin: 3px;
+		}
+
+		.todo .todo-header {
+			color: #ed6d07;
+			margin-top: 6px;
+			padding: 8px 15px;
+			border-bottom: 2px solid #fccc81; 
+		}
+		.todo .todo-header .z-label {
+			font-size: 15px;
+		}
+
+		.todo ul.todo-items {
+			margin: 0;
+			padding: 0px 15px 20px 15px;
+			list-style-type: none;
+		}
+
+		.todo ul.todo-items li {
+			padding-left: 25px;
+			padding-top: 2px;
+			border-bottom: 1px solid #eee;
+			position: relative;
+			line-height: 24px;
+			min-height: 24px;
+		}
+
+		.todo ul.todo-items li a {
+			color: #ccc;
+			text-decoration: none;
+		}
+
+		.todo ul.todo-items li:before {
+			font-family: FontAwesome;
+			font-size: 0.38em;
+			content: "\f111"; /*fa-circle*/
+			color: #ed6d07;
+			position: absolute;
+			top: 2px;
+			left: 13px;
+		}
+		
+		.todo ul.todo-items li.empty:before {
+			content: "";
+		}
+	</style>
+	<div sclass="todo">
+		<div sclass="todo-header">To Do List</div>
+		<n:ul sclass="todo-items">
+			<n:li>Implement User Story #5</n:li>
+			<n:li><a onClick="">Add new task</a></n:li>
+			<n:li class="empty"/>
+			<n:li class="empty"/>
+			<n:li class="empty"/>
+			<n:li class="empty"/>
+		</n:ul>
+	</div>
+</zk>

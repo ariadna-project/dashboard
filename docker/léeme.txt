@@ -1,0 +1,2 @@
+Ficheros para la exposición del proyecto dashboard sobre docker.
+Establecer las variables de entorno del fichero .env acorde al sistema

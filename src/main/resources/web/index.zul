@@ -1,0 +1,23 @@
+<zk xmlns:sh="shadow">
+	<borderlayout id="main" apply="com.ud.iot.mvc.controllers.IndexController">
+		<west width="10%">
+			<navbar orient="vertical" >
+				<navitem label="Home" onClick='incPanel.src = "~./zul/panel/home.zul"'/>
+				<nav id="navApps" label="Apps" apply="com.ud.iot.mvc.controllers.NavAppsController">
+					<sh:forEach id="feApps" var="app">
+						<nav id="${app.id}" label="${app.nombre}" apply="com.ud.iot.mvc.controllers.NavApplicationController" onOpen="main$composer.onAppOpen(event)">
+							<sh:forEach id="feDevices" var="dev">
+								<navitem id="dev_${dev.id}_app_${app.id}" label="${dev.nombre}" onClick="main$composer.onDeviceClicked(self)"/>
+							</sh:forEach>
+						</nav>
+					</sh:forEach>
+				</nav>
+				<navitem label="About" onClick='incPanel.src = "~./zul/panel/about.zul"'/>
+				<navitem label="Contact" onClick='incPanel.src = "~./zul/panel/contact.zul"'/>
+			</navbar>
+		</west>
+		<center>
+			<include id="incPanel" src="~./zul/panel/home.zul"></include>
+		</center>
+	</borderlayout>
+</zk>

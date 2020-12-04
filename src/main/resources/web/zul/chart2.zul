@@ -1,0 +1,4 @@
+<zk>
+	<charts id="chart" type="spline" title="Prueba 2" zoomType="x"
+		apply="com.ud.iot.charts.ExampleChart2" />
+</zk>

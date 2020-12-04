@@ -1,0 +1,62 @@
+<zk>
+	<style>
+		.translation {
+			border-radius: 3px;
+			border: 1px solid #ccc;
+			margin: 3px;
+		}
+
+		.translation .translation-text {
+			height: 150px;
+			padding: 6px
+		}
+
+		.translation .translation-lang {
+			position: relative;
+			padding: 6px
+		}
+		
+		.translation .translation-lang:after {
+			font-family: FontAwesome;
+			font-size: 8px;
+			content: "\f078"; /*fa-chevron-down*/
+			position: absolute;
+			top: 8px;
+			right: 6px;
+		}
+
+		.translation-to {
+			color: white;
+		}
+
+		.translation-from .translation-lang {
+			background-color: #eeeeee;
+		}
+		
+		.translation-to {
+			color: white;
+		}
+		
+		.translation-to .translation-lang {
+			background-color: #0c77bd;
+		}
+		
+		.translation-to .translation-text {
+			background-color: #3781c3;
+		}
+	</style>
+	<hlayout hflex="1" spacing="0" sclass="translation">
+		<vlayout hflex="1" spacing="0" sclass="translation-from">
+			<div sclass="translation-lang">English</div>
+			<div sclass="translation-text">
+				The value of a man resides in what he gives and not in what he is capable of receiving.
+			</div>
+		</vlayout>
+		<vlayout hflex="1" spacing="0" sclass="translation-to">
+			<div sclass="translation-lang">Spanish</div>
+			<div sclass="translation-text">
+				El valor de un hombre reside en lo que el da y no en lo que capaz de recibir.
+			</div>
+		</vlayout>
+	</hlayout>
+</zk>

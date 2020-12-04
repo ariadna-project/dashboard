@@ -1,0 +1,4 @@
+<zk>
+	<charts id="chart" type="line" title="Prueba 1"
+		apply="com.ud.iot.charts.ExampleChart1" />
+</zk>
