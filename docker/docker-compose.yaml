@@ -1,6 +1,6 @@
 version: '3'
 services:
- product:
+ dashboard:
   container_name: dashboard
   image: ud/dashboard
   build: .
