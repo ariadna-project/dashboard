@@ -30,8 +30,8 @@ public class DashWebClient {
 
 	@PostConstruct
 	public void init() {
-		webClient = WebClient.create("http://localhost:8086");
-		new ReactorNettyWebSocketClient().execute(URI.create("ws://localhost:8086/dash-event-emitter"), websocketSessionHandler).subscribe();
+		webClient = WebClient.create("http://3.14.168.124:8086");
+		new ReactorNettyWebSocketClient().execute(URI.create("ws://3.14.168.124:8086/dash-event-emitter"), websocketSessionHandler).subscribe();
 	}	
 
 	//Application
