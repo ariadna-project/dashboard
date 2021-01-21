@@ -1,6 +1,6 @@
 <?style src="styles.css"?>
 <zk xmlns:sh="shadow">
-	<groupbox width="450px" apply="com.ud.iot.mvc.controllers.ForEachComposer" mold="3d">
+	<groupbox width="450px" apply="com.ud.iot.mvc.composers.ForEachComposer" mold="3d">
 		<caption label="My Names (also draggable)">
 			<button forward="onSortAsc" iconSclass="z-icon-sort-alpha-asc"/>
 			<button forward="onSortDesc" iconSclass="z-icon-sort-alpha-desc"/>

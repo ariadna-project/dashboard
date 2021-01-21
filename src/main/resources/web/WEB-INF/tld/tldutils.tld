@@ -1,0 +1,12 @@
+<taglib>
+	<function>
+		<name>roles</name>
+		<function-class>com.ud.iot.util.TldUtils</function-class>
+		<function-signature>
+			boolean roles(java.lang.String)
+		</function-signature>
+		<description>
+			Método que comprueba la visibilidad de un componente según los roles del usuario
+		</description>
+	</function>
+</taglib>

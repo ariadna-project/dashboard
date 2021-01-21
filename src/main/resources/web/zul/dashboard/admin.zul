@@ -1,0 +1,35 @@
+<zk>
+	<div apply="com.ud.iot.mvc.composers.SignUpComposer">
+		<grid>
+			<columns>
+				<column />
+				<column />
+			</columns>
+			<rows>
+				<row spans="2" align="center">
+					<label value="Alta de usuario" />
+				</row>
+				<row>
+					<label value="User:" />
+					<textbox id="txtUsername" name="username" />
+				</row>
+				<row>
+					<label value="Password:" />
+					<textbox id="txtPassword" type="password"/>
+				</row>
+				<row>
+					<label value="Rol:" />
+					<textbox id="txtRole" value="USER" readonly="true"/>
+				</row>
+				<row spans="2" align="right">
+					<hlayout>
+						<button id="btnSignUp" label="Sign up" />
+					</hlayout>
+				</row>
+			</rows>
+		</grid>
+		<div>
+			<label id="lblError" visible="false" />
+		</div>
+	</div>
+</zk>

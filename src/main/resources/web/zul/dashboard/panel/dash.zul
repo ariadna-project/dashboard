@@ -1,0 +1,213 @@
+<div vflex="true" style="overflow:scroll">
+	<portallayout id="portalLayout" maximizedMode="whole" apply="com.ud.iot.mvc.composers.DashPanelComposer">
+		<portalchildren style="padding: 5px" width="20%">
+			<panel title="Posiciones" border="normal" sizable="true"
+				collapsible="true" closable="true" maximizable="true"
+				style="margin-bottom:10px">
+				<panelchildren>
+					<window width="100%" apply="com.ud.iot.charts.PositionsList">
+						<button id="btnLoadMore" visible="false" label="&lt;=="/>
+						<listbox id="litbox" emptyMessage="Sin posiciones">
+							<listhead>
+								<listheader label="Fecha"/>
+								<listheader label="Cód. servicio"/>
+								<listheader label="Latitud"/>
+								<listheader label="Longitud"/>
+								<listheader label="HDOP"/>
+								<listheader label="Exactitud"/>
+								<listheader label="Tipo alg"/>
+								<listheader label="Gw enviados"/>
+								<listheader label="Gw recibidos"/>
+						 	</listhead>
+							<template name="model" >
+								<listitem>
+									<listcell label="${each.fechaCrea}"/>
+									<listcell label="${each.serviceId}"/>		
+									<listcell label="${each.latitude}"/>
+									<listcell label="${each.longitude}"/>
+									<listcell label="${each.hdop}"/>
+									<listcell label="${each.accuracy}"/>
+									<listcell label="${each.algorithmType}"/>
+									<listcell label="${each.numberOfGatewaysReceived}"/>
+									<listcell label="${each.numberOfGatewaysUsed}"/>
+								</listitem>
+							</template>
+						</listbox>
+					</window>
+				</panelchildren>
+			</panel>
+			<panel title="Temperatura" border="normal" sizable="true"
+				collapsible="true" closable="true" maximizable="true"
+				style="margin-bottom:10px">
+				<panelchildren>
+					<window apply="com.ud.iot.charts.TempChart">
+						<div>
+							<label id="lblValue"/>
+							<image id="imgUnit" src="/img/betis.png" visible="false"></image>
+						</div>
+						<div>
+							<button id="btnLoadMore" visible="false" label="&lt;=="/>
+							<charts id="charts" type="spline" title="" zoomType="x" enableZoomSelection="false"/>
+						</div>
+					</window>
+				</panelchildren>
+			</panel>
+			<panel title="Presión" border="normal" sizable="true"
+				collapsible="true" closable="true" maximizable="true"
+				style="margin-bottom:10px">
+				<panelchildren>
+					<window apply="com.ud.iot.charts.PressChart">
+						<div>
+							<label id="lblValue"/>
+							<image id="imgUnit" src="/img/betis.png" visible="false"></image>
+						</div>
+						<div>
+							<button id="btnLoadMore" visible="false" label="&lt;=="/>
+							<charts id="charts" type="spline" title="" zoomType="x" enableZoomSelection="false"/>
+						</div>
+					</window>
+				</panelchildren>
+			</panel>
+		</portalchildren>
+	
+		<portalchildren style="padding: 5px" width="20%">
+			<panel title="Latitud" border="normal" sizable="true"
+				collapsible="true" closable="true" maximizable="true"
+				style="margin-bottom:10px">
+				<panelchildren>
+					<window apply="com.ud.iot.charts.LatitudeChart">
+						<div>
+							<label id="lblValue"/>
+							<image id="imgUnit" src="/img/betis.png" visible="false"></image>
+						</div>
+						<div>
+							<button id="btnLoadMore" visible="false" label="&lt;=="/>
+							<charts id="charts" type="spline" title="" zoomType="x" enableZoomSelection="false"/>
+						</div>
+					</window>
+				</panelchildren>
+			</panel>
+			<panel title="Longitud" border="normal" sizable="true"
+				collapsible="true" closable="true" maximizable="true"
+				style="margin-bottom:10px">
+				<panelchildren>
+					<window apply="com.ud.iot.charts.LongitudeChart">
+						<div>
+							<label id="lblValue"/>
+							<image id="imgUnit" src="/img/betis.png" visible="false"></image>
+						</div>
+						<div>
+							<button id="btnLoadMore" visible="false" label="&lt;=="/>
+							<charts id="charts" type="spline" title="" zoomType="x" enableZoomSelection="false"/>
+						</div>
+					</window>
+				</panelchildren>
+			</panel>
+		</portalchildren>
+	
+		<portalchildren style="padding: 5px" width="20%">
+			<panel title="Altitud" border="normal" sizable="true"
+				collapsible="true" closable="true" maximizable="true"
+				style="margin-bottom:10px">
+				<panelchildren>
+					<window apply="com.ud.iot.charts.AltitudeChart">
+						<div>
+							<label id="lblValue"/>
+							<image id="imgUnit" src="/img/betis.png" visible="false"></image>
+						</div>
+						<div>
+							<button id="btnLoadMore" visible="false" label="&lt;=="/>
+							<charts id="charts" type="spline" title="" zoomType="x" enableZoomSelection="false"/>
+						</div>
+					</window>
+				</panelchildren>
+			</panel>
+			<panel title="Batería" border="normal" sizable="true"
+				collapsible="true" closable="true" maximizable="true"
+				style="margin-bottom:10px">
+				<panelchildren>
+					<window apply="com.ud.iot.charts.BatteryChart">
+						<div>
+							<label id="lblValue"/>
+							<image id="imgUnit" src="/img/betis.png" visible="false"></image>
+						</div>
+						<div>
+							<button id="btnLoadMore" visible="false" label="&lt;=="/>
+							<charts id="charts" type="spline" title="" zoomType="x" enableZoomSelection="false"/>
+						</div>
+					</window>
+				</panelchildren>
+			</panel>
+		</portalchildren>
+	
+		<portalchildren style="padding: 5px" width="20%">
+			<panel title="Humedad suelo" border="normal" sizable="true"
+				collapsible="true" closable="true" maximizable="true"
+				style="margin-bottom:10px">
+				<panelchildren>
+					<window apply="com.ud.iot.charts.HumFloorChart">
+						<div>
+							<label id="lblValue"/>
+							<image id="imgUnit" src="/img/betis.png" visible="false"></image>
+						</div>
+						<div>
+							<button id="btnLoadMore" visible="false" label="&lt;=="/>
+							<charts id="charts" type="spline" title="" zoomType="x" enableZoomSelection="false"/>
+						</div>
+					</window>
+				</panelchildren>
+			</panel>
+			<panel title="Tiempo de vuelo" border="normal" sizable="true"
+				collapsible="true" closable="true" maximizable="true"
+				style="margin-bottom:10px">
+				<panelchildren>
+					<window apply="com.ud.iot.charts.TOFChart">
+						<div>
+							<label id="lblValue"/>
+							<image id="imgUnit" src="/img/betis.png" visible="false"></image>
+						</div>
+						<div>
+							<button id="btnLoadMore" visible="false" label="&lt;=="/>
+							<charts id="charts" type="spline" title="" zoomType="x" enableZoomSelection="false"/>
+						</div>
+					</window>
+				</panelchildren>
+			</panel>
+		</portalchildren>
+	
+		<portalchildren style="padding: 5px" width="20%">
+			<panel title="Humedad ambiente" border="normal" sizable="true"
+				collapsible="true" closable="true" maximizable="true"
+				style="margin-bottom:10px">
+				<panelchildren>
+					<window apply="com.ud.iot.charts.HumAmbChart">
+						<div>
+							<label id="lblValue"/>
+							<image id="imgUnit" src="/img/betis.png" visible="false"></image>
+						</div>
+						<div>
+							<button id="btnLoadMore" visible="false" label="&lt;=="/>
+							<charts id="charts" type="spline" title="" zoomType="x" enableZoomSelection="false"/>
+						</div>
+					</window>
+				</panelchildren>
+			</panel>
+			<panel title="Presencia" border="normal" sizable="true"
+				collapsible="true" closable="true" maximizable="true"
+				style="margin-bottom:10px">
+				<panelchildren>
+					<window apply="com.ud.iot.charts.PresenceChart">
+						<div>
+							<label id="lblValue"/>
+							<image id="imgUnit" src="/img/betis.png" visible="false"></image>
+						</div>
+						<div>
+							<button id="btnLoadMore" visible="false" label="&lt;=="/>
+							<charts id="charts" type="spline" title="" zoomType="x" enableZoomSelection="false"/>
+						</div>
+					</window>
+				</panelchildren>
+			</panel>
+		</portalchildren>
+	</portallayout>
+</div>
